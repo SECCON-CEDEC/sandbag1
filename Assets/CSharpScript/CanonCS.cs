@@ -21,7 +21,7 @@ public class CanonCS : MonoBehaviour {
 				Camera.main.ScreenPointToRay(Input.mousePosition);
 			Vector3 dir = ray.direction.normalized;
 			
-			bullet.rigidbody.velocity = dir * power;
+			bullet.GetComponent<Rigidbody>().velocity = dir * power;
 		}	
 	}
 	GameObject LoadBullet() {
