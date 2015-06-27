@@ -1,0 +1,28 @@
+Initialize engine version: 4.6.3f1 (4753d8b6ef2b)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: NVIDIA NVS 300 (ID=0x10d8)
+    Vendor:   NVIDIA
+    VRAM:     459 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\LitJson.dll (this message is harmless)
+Loading C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\LitJson.dll into Unity Child Domain
+- Completed reload, in  0.052 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Masaya\Documents\SandBag1\sandbag_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 0.530830 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 251.
+Total: 0.723659 ms (FindLiveObjects: 0.014297 ms CreateObjectMapping: 0.008798 ms MarkObjects: 0.150670 ms  DeleteObjects: 0.043624 ms)
+
