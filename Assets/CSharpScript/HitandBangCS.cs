@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//
 public class HitandBangCS : MonoBehaviour {
 
 	// Use this for initialization
@@ -15,6 +15,9 @@ public class HitandBangCS : MonoBehaviour {
 
 	void OnCollisionEnter ( Collision col)
 	{
-		ScoreCS.scorePoint ++;
+		ScoreCS.scorePoint += CanonCS.addPoint;
+		if (col.gameObject.tag == "Bullet") {
+			Destroy (col.gameObject);
+		}
 	}
 }

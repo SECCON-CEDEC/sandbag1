@@ -1,19 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using Common;
 using LitJson;
 
-
+//
 public class overCS : MonoBehaviour {
 	public int  result_pts;
 	public float display_pts;
+	private float inc_speed;
 	public GUIStyle buttonStyle;
 	public string playerName;
 	public int rank;
-
+	private int playcount;
+	private int itemLevel;
+	private string[] ordinal = {"","st","nd","rd"};
+	private int[] UPrank =  {2,4,6};
+	private string[] ItemName =  {"Bronze Balls","Silver Balls","Gold Balls"};
 	// Use this for initialization
 	void Start () {
 		result_pts=PlayerPrefs.GetInt("scorePoint");
@@ -22,13 +28,27 @@ public class overCS : MonoBehaviour {
 		Text msg = GameObject.Find ("Canvas/rank").GetComponent<Text> ();
 		msg.text = "";
 		StartCoroutine(UploadScore());
+
+		playcount=PlayerPrefs.GetInt("playcount",0);
+		playcount++;
+		PlayerPrefs.SetInt("playcount",playcount);
+		int i = Array.IndexOf (UPrank, playcount);
+		if (i >= 0) {
+			itemLevel = i + 1;
+			PlayerPrefs.SetInt ("item", itemLevel);
+			Text msg2 = GameObject.Find ("Canvas/itemget").GetComponent<Text> ();
+			msg2.text = "You get "+ItemName[i];
+		} else {
+			GameObject.Find ("Canvas/itemget").GetComponent<Text> ().enabled=false;
+		}
+		inc_speed = result_pts / 51.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if(display_pts < result_pts*10){
-			display_pts+=0.7F;
+		if(display_pts < result_pts){
+			display_pts+=inc_speed;
 		}
 		Text msg = GameObject.Find ("Canvas/score").GetComponent<Text> ();
 		msg.text = Mathf.Floor(display_pts)+" pts";
@@ -36,11 +56,15 @@ public class overCS : MonoBehaviour {
 
 	void OnGUI () {
 		if(display_pts >= result_pts){
-			//Retry Button
+			//
 			Text msg = GameObject.Find ("Canvas/rank").GetComponent<Text> ();
-			msg.text = "Your ranking is "+ rank;
+			if(rank<4) {
+				msg.text = "Your rank is "+ rank+ordinal[rank];
+			}else{
+				msg.text = "Your rank is "+ rank+"th";
+			}
 			if(GUI.Button(new Rect( Screen.width/4
-		                       ,Screen.height/2+30
+		                       ,Screen.height/2+140
 		                       ,Screen.width/2
 		                       ,Screen.height/16),"Retry",buttonStyle))
 			

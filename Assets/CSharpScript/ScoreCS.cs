@@ -11,7 +11,7 @@ public class ScoreCS : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<GUIText>().text = "SCORE "+(scorePoint*10).ToString();
+		guiText.text = "SCORE "+(scorePoint).ToString();
 	
 	}
 }

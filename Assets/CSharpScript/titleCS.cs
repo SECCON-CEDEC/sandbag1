@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-
+//
 public class titleCS : MonoBehaviour {
 	public GUIStyle buttonStyle;
 	public GUIStyle buttonStyle2;
@@ -27,6 +27,10 @@ public class titleCS : MonoBehaviour {
 		}
 		nextTime = Time.time;
 		titleScale = 200.0f;
+/* //
+ 		PlayerPrefs.SetInt("item",0);
+		PlayerPrefs.SetInt("playcount",0);
+*/
 	}
 	
 	// Update is called once per frame
