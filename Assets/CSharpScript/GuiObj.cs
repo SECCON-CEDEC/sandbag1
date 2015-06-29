@@ -31,6 +31,8 @@ public class GuiObj : MonoBehaviour {
 				PlayerPrefs.Save();
 				string xplayerName=PlayerPrefs.GetString("playerName");
 				Debug.Log ("player:"+xplayerName);
+				PlayerPrefs.SetInt("item",0);
+				PlayerPrefs.SetInt("playcount",0);
 				Application.LoadLevel ("title");
 			}
 		}
