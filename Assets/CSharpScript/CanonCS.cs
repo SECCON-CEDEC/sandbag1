@@ -52,8 +52,7 @@ public class CanonCS : MonoBehaviour {
 			//
 			Ray ray= 
 				Camera.main.ScreenPointToRay(Input.mousePosition);
-			Vector3 dir = ray.direction.normalized;
-			
+			Vector3 dir = ray.direction.normalized;	
 			bullet.rigidbody.velocity = dir * power;
 		}	
 	}
