@@ -58,10 +58,10 @@ public class titleCS : MonoBehaviour {
 	                       , Screen.height / 2 + 100
 	                       , Screen.width / 2
 	                       , Screen.height / 16), "RANKING", buttonStyle)) {
-						Application.LoadLevel ("ranking");
+						Application.LoadLevel ("halloffame");
 				}
 				if (GUI.Button (new Rect (Screen.width *3/ 8
-			                          , Screen.height / 2 + 210
+			                          , Screen.height / 2 + 250
 			                          , Screen.width / 4
 			                          , Screen.height / 32), "Change Name", buttonStyle2)) {
 					Application.LoadLevel ("entry");

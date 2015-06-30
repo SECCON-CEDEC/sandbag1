@@ -49,7 +49,7 @@ public class rankingcs : MonoBehaviour {
 	}
 	void OnGUI () {
 		if(GUI.Button(new Rect( Screen.width/4
-		                       ,Screen.height/2+240
+		                       ,Screen.height/10*9
 		                       ,Screen.width/2
 		                       ,Screen.height/16),"BACK",buttonStyle))
 			
